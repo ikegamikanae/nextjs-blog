@@ -6,7 +6,7 @@ import Date from '../../components/date'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostData(params.id)
+  const postData = await getPostData(params?.id as string)
 
   return {
     props: {
